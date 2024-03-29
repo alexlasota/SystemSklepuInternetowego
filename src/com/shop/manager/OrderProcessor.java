@@ -29,7 +29,6 @@ public class OrderProcessor implements OrderManager {
     public void generateInvoice(Order order) {
         System.out.println("Invoice generated.");
         System.out.println("Order details:");
-        System.out.println("Order details:");
         displayOrderDetails(order);
         System.out.println("Total price: " + order.getTotalPrice());
     }
