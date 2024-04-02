@@ -31,7 +31,6 @@ public class ProductManager {
      * @return
      */
 
-    //easada
     public Product getProductById(long id) {
         for (Product product : products) {
             if (product.getId() == id) {
