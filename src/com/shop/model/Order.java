@@ -1,4 +1,5 @@
 package com.shop.model;
+import java.time.ZonedDateTime;
 import java.util.List;
 
 public class Order {
@@ -6,11 +7,14 @@ public class Order {
     private List<Product> products;
     private Customer customer;
     private double totalPrice;
+    private ZonedDateTime orderDateTime;
+
 
     public Order(List<Product> products, Customer customer, double totalPrice) {
         this.products = products;
         this.customer = customer;
         this.totalPrice = totalPrice;
+        this.orderDateTime = ZonedDateTime.now();
     }
 
 
@@ -24,6 +28,10 @@ public class Order {
 
     public double getTotalPrice() {
         return totalPrice;
+    }
+
+    public ZonedDateTime getOrderDateTime() {
+        return orderDateTime;
     }
 }
 

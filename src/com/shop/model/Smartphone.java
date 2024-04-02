@@ -55,7 +55,3 @@ public class Smartphone extends Product {
         this.accessories = accessories;
     }
 }
-//Typ Produktu: Smartfon**
-//
-//Specyficzna Obsługa: Dodanie funkcji umożliwiającej
-// wybór koloru, pojemności baterii, oraz dodatkowych akcesoriów przy zakupie smartfona.

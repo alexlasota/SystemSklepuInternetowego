@@ -1,19 +1,16 @@
 package com.shop.app;
 
-import com.shop.manager.ProductManager;
-import com.shop.model.Cart;
+import com.shop.manager.ProductProcessor;
 import com.shop.model.Computer;
 import com.shop.model.Product;
 import com.shop.model.Smartphone;
 import com.shop.ui.ConsoleUI;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ShopApplication {
     public static void main(String[] args) {
-        ProductManager productManager = new ProductManager();
+        ProductProcessor productManager = new ProductProcessor();
 
 
         Product product1 = new Product(1, "Laptop Dell", 2999, 10);

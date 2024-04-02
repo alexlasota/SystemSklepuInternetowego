@@ -45,7 +45,3 @@ public class Cart {
         return order;
     }
 }
-//Cart: Klasa reprezentująca koszyk zakupowy klienta.
-// Powinna zawierać metody :
-// do dodawania produktów do koszyka, usuwania produktów,
-// przeglądania zawartości koszyka oraz składania zamówienia.

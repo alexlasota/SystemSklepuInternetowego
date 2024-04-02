@@ -5,11 +5,11 @@ import com.shop.model.Product;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductManager {
+public class ProductProcessor implements ProductManagement {
 
     private List<Product> products;
 
-    public ProductManager() {
+    public ProductProcessor() {
         this.products = new ArrayList<>();
     }
 

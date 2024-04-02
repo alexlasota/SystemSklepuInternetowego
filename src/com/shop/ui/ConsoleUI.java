@@ -1,7 +1,7 @@
 package com.shop.ui;
 
 import com.shop.manager.OrderProcessor;
-import com.shop.manager.ProductManager;
+import com.shop.manager.ProductProcessor;
 import com.shop.model.Cart;
 import com.shop.model.Customer;
 import com.shop.model.Order;
@@ -12,12 +12,12 @@ import java.util.Scanner;
 
 public class ConsoleUI {
 
-    private ProductManager productManager;
+    private ProductProcessor productManager;
     private Cart cart;
     private OrderProcessor orderProcessor;
     private Scanner scanner;
 
-    public ConsoleUI(ProductManager productManager) {
+    public ConsoleUI(ProductProcessor productManager) {
         this.productManager = productManager;
         cart = new Cart();
         orderProcessor = new OrderProcessor();
