@@ -7,6 +7,7 @@ import com.shop.model.Customer;
 import com.shop.model.Order;
 import com.shop.model.Product;
 
+import java.time.ZonedDateTime;
 import java.util.List;
 import java.util.Scanner;
 
@@ -88,6 +89,7 @@ public class ConsoleUI {
         String lastName = scanner.nextLine();
 
         Customer customer = new Customer(firstName, lastName);
+        ZonedDateTime orderTime = ZonedDateTime.now();
         Order order = cart.checkout(customer);
         orderProcessor.processOrder(order);
 //    }
