@@ -7,12 +7,22 @@ import java.util.List;
 
 public class OrderProcessor implements OrderManager {
 
+    /**
+     * Processes the given order by displaying order details and generating an invoice.
+     *
+     * @param order The order to be processed.
+     */
     @Override
     public void processOrder(Order order) {
         displayOrderDetails(order);
         generateInvoice(order);
     }
 
+    /**
+     * Displays the details of the given order.
+     *
+     * @param order The order whose details are to be displayed.
+     */
     @Override
     public void displayOrderDetails(Order order) {
         System.out.println("Order for client: " + order.getCustomer().getFirstName() +
@@ -25,6 +35,10 @@ public class OrderProcessor implements OrderManager {
         System.out.println("Total price: " + order.getTotalPrice());
     }
 
+    /**
+     * Generates an invoice for the given order.
+     * @param order The order for which the invoice is to be generated.
+     */
     @Override
     public void generateInvoice(Order order) {
         System.out.println("Invoice generated.");
