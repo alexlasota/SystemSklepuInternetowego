@@ -1,5 +1,6 @@
 package com.shop.model;
 
+import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,10 +37,10 @@ public class Cart {
     }
 
 
-    public Order checkout(Customer customer) {
+    public Order checkout(Customer customer, ZonedDateTime orderTime) {
         List<Product> productsCopy = new ArrayList<>(products);
 
-        Order order = new Order(productsCopy, customer, getTotalPrice());
+        Order order = new Order(productsCopy, customer, getTotalPrice(), orderTime);
 
         clearCart();
         return order;

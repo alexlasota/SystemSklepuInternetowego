@@ -10,7 +10,7 @@ public class Order {
     private ZonedDateTime orderDateTime;
 
 
-    public Order(List<Product> products, Customer customer, double totalPrice) {
+    public Order(List<Product> products, Customer customer, double totalPrice, ZonedDateTime orderTime) {
         this.products = products;
         this.customer = customer;
         this.totalPrice = totalPrice;
