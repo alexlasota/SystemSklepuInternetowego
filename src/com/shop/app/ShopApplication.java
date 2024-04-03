@@ -21,6 +21,7 @@ public class ShopApplication {
         productManager.addProduct(product2);
         productManager.addProduct(product3);
 
+
         ConsoleUI consoleUI = new ConsoleUI(productManager);
         consoleUI.start();
     }

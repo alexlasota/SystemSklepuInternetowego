@@ -15,6 +15,7 @@ public class OrderProcessor implements OrderManager {
     @Override
     public void processOrder(Order order) {
         displayOrderDetails(order);
+        ProductDiscount.applyDiscountIfApplicable(order); // discount applied if applicable
         generateInvoice(order);
     }
 
@@ -37,6 +38,7 @@ public class OrderProcessor implements OrderManager {
 
     /**
      * Generates an invoice for the given order.
+     *
      * @param order The order for which the invoice is to be generated.
      */
     @Override

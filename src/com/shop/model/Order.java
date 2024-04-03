@@ -33,5 +33,9 @@ public class Order {
     public ZonedDateTime getOrderDateTime() {
         return orderDateTime;
     }
+
+    public void setTotalPrice(double totalPrice) {
+        this.totalPrice = totalPrice;
+    }
 }
 
