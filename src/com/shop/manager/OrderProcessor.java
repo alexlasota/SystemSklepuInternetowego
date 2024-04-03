@@ -7,6 +7,12 @@ import java.util.List;
 
 public class OrderProcessor implements OrderManager {
 
+    private OrderRepository orderRepository;
+
+    public OrderProcessor() {
+        this.orderRepository = new OrderRepository();
+    }
+
     /**
      * Processes the given order by displaying order details and generating an invoice.
      *
@@ -17,6 +23,8 @@ public class OrderProcessor implements OrderManager {
         displayOrderDetails(order);
         ProductDiscount.applyDiscountIfApplicable(order); // discount applied if applicable
         generateInvoice(order);
+        orderRepository.saveOrder(order);
+
     }
 
     /**
