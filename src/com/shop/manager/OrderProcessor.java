@@ -54,7 +54,6 @@ public class OrderProcessor implements OrderManager {
         System.out.println("Invoice generated.");
         System.out.println("Order details:");
         displayOrderDetails(order);
-        System.out.println("Total price: " + order.getTotalPrice());
     }
 }
 
