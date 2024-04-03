@@ -37,9 +37,10 @@ public class Cart {
     }
 
 
-    public Order checkout(Customer customer, ZonedDateTime orderTime) {
+    public Order checkout(Customer customer) {
         List<Product> productsCopy = new ArrayList<>(products);
 
+        ZonedDateTime orderTime = ZonedDateTime.now();
         Order order = new Order(productsCopy, customer, getTotalPrice(), orderTime);
 
         clearCart();
