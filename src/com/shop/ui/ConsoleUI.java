@@ -90,7 +90,7 @@ public class ConsoleUI {
 
         Customer customer = new Customer(firstName, lastName);
         ZonedDateTime orderTime = ZonedDateTime.now();
-        Order order = cart.checkout(customer);
+        Order order = cart.checkout(customer, orderTime);
         orderProcessor.processOrder(order);
 //    }
 //
